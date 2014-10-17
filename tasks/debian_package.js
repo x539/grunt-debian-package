@@ -99,7 +99,7 @@ module.exports = function (grunt) {
             _findAndReplace([control], '\\$\\{short_description\\}', options.short_description);
             _findAndReplace([control], '\\$\\{long_description\\}', options.long_description);
             _findAndReplace([changelog, control, links, dirs], '\\$\\{version\\}', options.version);
-            _findAndReplace([changelog, control, links, dirs], '\\$\\{build_number\\}', options.build_number);
+           // _findAndReplace([changelog, control, links, dirs], '\\$\\{build_number\\}', options.build_number);
             _findAndReplace([control], '\\$\\{dependencies\\}', dependencies);
             preparePackageContents(makefile, this.files, options.follow_soft_links, options.quiet);
 
