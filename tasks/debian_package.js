@@ -101,6 +101,8 @@ module.exports = function (grunt) {
             _findAndReplace([changelog, control, links, dirs], '\\$\\{version\\}', options.version);
             _findAndReplace([changelog, control, links, dirs], '\\$\\{build_number\\}', options.build_number);
             _findAndReplace([control], '\\$\\{dependencies\\}', dependencies);
+            _findAndReplace([control], '\\$\\{replaces\\}', options.replaces);
+            _findAndReplace([control], '\\$\\{conflicts\\}', options.conflicts);
             preparePackageContents(makefile, this.files, options.follow_soft_links, options.quiet);
 
             // copy package lifecycle scripts

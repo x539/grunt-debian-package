@@ -8,5 +8,7 @@ Build-Depends: debhelper (>= 9)
 Package: ${name}
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}${dependencies}
+Replaces: ${replaces}
+Conflicts: ${conflicts}
 Description: ${short_description}
 ${long_description}
